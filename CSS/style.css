@@ -105,6 +105,8 @@ section {
     /* border: 5px solid yellow; */
 }
 
+/* Mostly about some minor adjustment on section */
+
 section:nth-of-type(1) {
     background-color: #18033c;
     justify-content: center;
@@ -113,23 +115,27 @@ section:nth-of-type(1) {
 }
 /* Title */
 section:nth-of-type(1) > div > h1 {
-    font-size: 2.5em;
+    font-size: clamp(1.5rem, 5vw + 0.5rem, 2.5rem);
+    /* font-size: 1.5rem; */
+    /* font-size: 2.5rem; */
     color: #eea1be;
 }
 /* Title */
-section:nth-of-type(2) {
+
+section:nth-of-type(2),
+section:nth-of-type(3) {
     background-color: #420fe7;
     padding-bottom: 2em;
 }
 
-section:nth-of-type(3) {
+section:nth-of-type(4) {
     background-color: #420fe7;
     padding: 3em 0;
     display: flex;
     justify-content: center;
 }
 
-section:nth-of-type(4) {
+section:nth-of-type(5) {
     background-color: #eea1be;
     color: #18033c;
     width: 100%;
@@ -139,6 +145,7 @@ section:nth-of-type(4) {
     justify-content: center;
     align-items: center;
 }
+
 /* waves */
 .spacer {
     aspect-ratio: 900/100;
@@ -161,11 +168,15 @@ section:nth-of-type(4) {
 /* ----------------------------------------------------------------------- */
 /* --------------------------Section 2 About Me--------------------------- */
 /* ----------------------------------------------------------------------- */
+section:nth-of-type(2) {
+    flex-wrap: wrap;
+}
+
 /* Foto */
 .palatte {
     height: auto;
-    /* width: 50vw; */
-    width: 40vw;
+    width: 50vw;
+    /* width: min(40%, 40vw); */
     margin: auto;
     display: flex;
     /* flex-flow: row wrap; */
@@ -176,7 +187,7 @@ section:nth-of-type(4) {
 }
 
 .palatte > img {
-    width: 50%;
+    width: max(50%, 300px);
     height: auto;
     background: rgba(66, 15, 231, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -201,7 +212,7 @@ section:nth-of-type(4) {
 /* Foto */
 
 section:nth-of-type(2) > div:nth-of-type(2) {
-    width: 40vw;
+    width: max(40vw, 300px);
     font-size: auto;
     display: flex;
     flex-wrap: wrap;
@@ -212,11 +223,6 @@ section:nth-of-type(2) > div:nth-of-type(2) {
 section:nth-of-type(2) > div:nth-of-type(2) > h3 {
     transition: all 0.5s;
     transform: translate(0, 0);
-}
-
-section:nth-of-type(2) > div:nth-of-type(2) > h3:hover {
-    transform: translate(-3%, -3%);
-    box-shadow: 20px 20px rgba(24, 3, 60, 1);
 }
 
 /* Table */
@@ -268,6 +274,25 @@ td {
 /* ------------------------------------------------------------------------ */
 /* --------------------------Section 3 Portofolio-------------------------- */
 /* ------------------------------------------------------------------------ */
+section:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(0.50rem, 0.14rem + 1.79vw, 1.75rem);
+    /* font-size: clamp(1.5rem, 5vw + 0.5rem, 2.5rem); */
+    flex-wrap: wrap;
+}
+
+section:nth-of-type(3) > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section:nth-of-type(3) > div > i {
+    size: 3em;
+    margin: 0 min(2rem, 6vw);
+}
+
 .container {
     position: relative;
     width: 1100px;
@@ -343,7 +368,7 @@ td {
     visibility: visible;
     width: 80%;
     opacity: 1;
-    font-size: 1.5em;
+    font-size: 1.25rem;
     margin-top: -350px;
     transition-delay: 0.5s;
 }
@@ -354,7 +379,7 @@ td {
     margin-top: 0px;
 }
 /* section 4 */
-/* section:nth-of-type(4) > div:nth-of-type(1) {
+/* section:nth-of-type(5) > div:nth-of-type(1) {
     margin-left: 2em;
     width: 50vw;
     height: 100vh;
